@@ -16,7 +16,7 @@ AKOSettings:
   apiServerPort: 8080 # Internal port for AKO's API server for the liveness probe of the AKO pod default=8080
   deleteConfig: 'false' # Has to be set to true in configmap if user wants to delete AKO created objects from AVI
   disableStaticRouteSync: 'false' # If the POD networks are reachable from the Avi SE, set this knob to true.
-  clusterName: <CLUSTER_NAME>   # A unique identifier for the kubernetes cluster, that helps distinguish the objects for this cluster in the avi controller. // MUST-EDIT
+  clusterName: miuser-18-depa   # A unique identifier for the kubernetes cluster, that helps distinguish the objects for this cluster in the avi controller. // MUST-EDIT
   cniPlugin: '' # Set the string if your CNI is calico or openshift. enum: calico|canal|flannel|openshift|antrea|ncp
   enableEVH: false # This enables the Enhanced Virtual Hosting Model in Avi Controller for the Virtual Services
   layer7Only: false # If this flag is switched on, then AKO will only do layer 7 loadbalancing.
@@ -70,7 +70,7 @@ ControllerSettings:
   controllerVersion: '21.1.3' # The controller API version
   cloudName: Default-Cloud   # The configured cloud name on the Avi controller.
   controllerHost: 'avic-03.lab.livefire.dev' # IP address or Hostname of Avi Controller
-  tenantName: <TENANT>   # <miuser00x> Name of the tenant where all the AKO objects will be created in AVI.
+  tenantName: miuser018  # <miuser00x> Name of the tenant where all the AKO objects will be created in AVI.
 
 nodePortSelector: # Only applicable if serviceType is NodePort
   key: ''
@@ -94,7 +94,7 @@ rbac:
 avicredentials:
   username: 'ako-svc'
   #password: '<password_here>'  #Not used for the livefire courses
-  authtoken:  '<AVIAUTH>' # Get OAUTH token provided by instructor
+  authtoken:  'db20afaf16d3bcb98eed4bf1c33ea7034c66d3d8' # Get OAUTH token provided by instructor
   certificateAuthorityData:
 
 
