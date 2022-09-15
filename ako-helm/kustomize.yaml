@@ -11,4 +11,4 @@ helmChartInflationGenerator:
   chartVersion: 1.6.1
   releaseName: ako
   releaseNamespace: avi-system
-  values: ako-values.yaml
+  values: ./ako-values.yaml
